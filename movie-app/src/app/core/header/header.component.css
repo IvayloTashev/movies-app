@@ -1,0 +1,44 @@
+header {
+    background-color: black;
+}
+
+.nav-container {
+    max-width: 1280px;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 40px;
+    align-items: center;
+    margin: auto;
+}
+
+.logo-container a p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    background: #FF3227;
+    background: linear-gradient(to left, #FF3227 0%, #7A42E3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: solid 2px #FF3227;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+ul li {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+ul li a {
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-bottom: solid 3px black;
+    padding: 5px;
+}
+
+ul li a:hover {
+    color: #FF3227;
+    border-bottom: solid 3px white;
+}
