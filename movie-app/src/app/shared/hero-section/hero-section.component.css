@@ -1,0 +1,60 @@
+.hero-section-container {
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 30px 0;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 35px;
+    color: white;
+    text-align: center;
+}
+
+.description .welcome-mgs {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.description .welcome-mgs a {
+    font-size: 1.8rem;
+    font-weight: bold;
+    background: #FF3227;
+    background: linear-gradient(to left, #FF3227 0%, #7A42E3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: solid 2px #FF3227;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.description .signup-msg {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.signup-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.signup-container a {
+    font-size: 1.3rem;
+    font-weight: 500;
+    border: solid 2px #FF3227;
+    padding: 10px;
+    border-radius: 15px;
+    width: 200px;
+}
+
+.signup-container a:hover {
+    background-color: #FF3227;
+}
+
