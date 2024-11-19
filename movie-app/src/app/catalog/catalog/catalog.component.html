@@ -1,0 +1,20 @@
+<!-- @for (movie of moviesCollection; track $index) {
+<img src="{{movie.image}}" alt="">
+} -->
+
+<div class="catalog-container">
+
+    <div class="card-container">
+
+        @for (movie of moviesCollection; track $index) {
+        <div class="card">
+            <div class="poster-holder">
+                <img src="{{movie.image}}" alt="">
+            </div>
+            <p>{{movie.title}}</p>
+            <a [routerLink]="movie.id">Details</a>
+        </div>
+        }
+    </div>
+
+</div>
