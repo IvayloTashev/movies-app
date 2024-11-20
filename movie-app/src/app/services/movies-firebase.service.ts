@@ -1,5 +1,5 @@
 import { inject, Injectable } from '@angular/core';
-import { addDoc, collection, collectionData, Firestore } from '@angular/fire/firestore';
+import { addDoc, collection, collectionData, doc, docData, Firestore } from '@angular/fire/firestore';
 import { from, Observable } from 'rxjs';
 import { MovieInteface } from '../types/movie';
 
@@ -14,6 +14,11 @@ export class MoviesFirebaseService {
     return collectionData(this.moviesCollection, {
       idField: 'id'
     })
+  }
+
+  getMovieById(movieId: string): Observable<MovieInteface> {
+    const movieDocRef = doc(this.firestore, `movies/${movieId}`);
+    return docData(movieDocRef, { idField: 'id' });
   }
 
   addMovie(movie: MovieInteface): Observable<string> {
