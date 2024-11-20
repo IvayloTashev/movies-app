@@ -1,0 +1,33 @@
+<div class="details-container">
+
+    <div class="title-container">
+        <p>{{movie.title}}</p>
+    </div>
+
+    <div class="poster-trailer-container">
+        <div class="poster-holder">
+            <img src="{{movie.image}}" alt="poster">
+        </div>
+
+        <div class="trailer-holder">
+            <img src="error.webp" alt="">
+        </div>
+    </div>
+
+    <div class="description">
+        <div class="genre-container">
+            <ul>
+                @for (genre of movie.genre; track $index) {
+                <li>{{genre}}</li>
+                }
+            </ul>
+        </div>
+
+        <p>{{movie.description}}</p>
+        <p>Director: {{movie.director}}</p>
+        <p>IMDb rating: {{movie.rating}}</p>
+    </div>
+
+    <!-- TODO comments -->
+
+</div>

@@ -4,6 +4,7 @@ import { NotFoundComponent } from './error/not-found/not-found.component';
 import { LoginComponent } from './user/login/login.component';
 import { RegisterComponent } from './user/register/register.component';
 import { CatalogComponent } from './catalog/catalog/catalog.component';
+import { DetailsComponent } from './details/details.component';
 
 export const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -12,8 +13,10 @@ export const routes: Routes = [
     {path: 'login', component: LoginComponent},
     {path: 'register', component: RegisterComponent},
 
-    {path: 'catalog', component: CatalogComponent},
-
+    {path: 'catalog', children: [
+        {path: '', component: CatalogComponent },
+        {path: ':movieId', component: DetailsComponent }
+    ]},
 
     {path: '404', component: NotFoundComponent},
     {path: '**', redirectTo: '/404'},

@@ -19,7 +19,6 @@ export class CatalogComponent implements OnInit {
   ngOnInit(): void {
     this.moviesFirebaseService.getMovies().subscribe(movies => {
       this.moviesCollection = movies;
-      console.log(this.moviesCollection);
     })
   }
 }
