@@ -10,7 +10,12 @@
         </div>
 
         <div class="trailer-holder">
-            <img src="error.webp" alt="">
+            <youtube-player
+            [videoId]="movie.trailer"
+            [width]="640"
+            [height]="360"
+          ></youtube-player>
+
         </div>
     </div>
 
@@ -27,6 +32,8 @@
         <p>Director: {{movie.director}}</p>
         <p>IMDb rating: {{movie.rating}}</p>
     </div>
+
+
 
     <!-- TODO comments -->
 
