@@ -31,7 +31,7 @@ ul li {
     gap: 30px;
 }
 
-ul li a {
+ul li a{
     font-size: 1.2rem;
     font-weight: 500;
     border-bottom: solid 3px black;
@@ -42,3 +42,21 @@ ul li a:hover {
     color: #FF3227;
     border-bottom: solid 3px white;
 }
+
+button {
+    border: none;
+    background-color: black;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-bottom: solid 3px black;
+    padding: 5px;
+    color: white;
+}
+
+button:hover {
+    color: #FF3227;
+    border-bottom: solid 3px white;
+}
+
+
+

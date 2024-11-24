@@ -15,8 +15,13 @@
         <div class="signup-container">
             <ul>
                 <li>
-                    <a routerLink="/login">Login</a>
-                    <a routerLink="/register">Register</a>
+                    @if (authService.currentUserSig() == null) {
+                        <a routerLink="/login">Login</a>
+                        <a routerLink="/register">Register</a>
+                    } @else {
+                        <a routerLink="/profile">Profile</a>
+                        <button (click)="logout()">Logout</button>
+                    }
                 </li>
             </ul>
         </div>
