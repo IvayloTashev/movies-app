@@ -1,13 +1,15 @@
 import { inject, Injectable } from '@angular/core';
-import { addDoc, collection, collectionData, doc, docData, Firestore } from '@angular/fire/firestore';
+import { addDoc, collection, collectionData, doc, docData, Firestore} from '@angular/fire/firestore';
 import { from, Observable } from 'rxjs';
 import { MovieInteface } from '../types/movie';
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MoviesFirebaseService {
   firestore = inject(Firestore);
+  authService = inject(AuthService)
   moviesCollection = collection(this.firestore, 'movies');
 
   getMovies(): Observable<MovieInteface[]> {
@@ -27,5 +29,4 @@ export class MoviesFirebaseService {
     );
     return from(promise);
   }
-
 }

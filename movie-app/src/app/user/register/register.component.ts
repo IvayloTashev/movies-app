@@ -14,12 +14,9 @@ import { EmailDirective } from '../../directives/email.directive';
 export class RegisterComponent {
   errorMessage: string | null = null;
 
-  constructor(private router: Router, private authService: AuthService) {}
+  constructor(private router: Router, private authService: AuthService) { }
 
   register(form: NgForm) {
-
-    console.log(this.errorMessage);
-    
     if (form.invalid) {
       return;
     }
