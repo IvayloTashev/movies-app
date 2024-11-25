@@ -10,10 +10,11 @@
         </div>
 
         <div class="trailer-holder">
-            <youtube-player
+            <youtube-player 
             [videoId]="movie.trailer"
-            [width]="640"
-            [height]="360"
+            [width]="756"
+            [height]="414"
+            class="youtube-video"
           ></youtube-player>
 
         </div>
@@ -30,7 +31,7 @@
 
         <p>{{movie.description}}</p>
         <p>Director: {{movie.director}}</p>
-        <p>IMDb rating: {{movie.rating}}</p>
+        <p><span>IMDb</span> rating: {{movie.rating}} / 10 <i class="fa-solid fa-star"></i></p>
     </div>
 
 

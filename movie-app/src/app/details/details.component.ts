@@ -22,7 +22,6 @@ export class DetailsComponent implements OnInit {
 
     this.moviesFirebaseService.getMovieById(movieId).subscribe((movieData) => {
       this.movie = movieData;
-      console.log(this.movie);
     })
 
     if (!this.apiLoaded) {

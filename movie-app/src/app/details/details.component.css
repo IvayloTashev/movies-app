@@ -29,6 +29,8 @@
 .poster-trailer-container .trailer-holder {
     flex: 0 0 60%;
     height: 414px;
+    border-radius: 40px;
+    overflow: hidden;
 }
 
 .poster-holder img,
@@ -61,3 +63,16 @@
 .description p {
     font-size: 1.2rem;
 }
+
+.description p span {
+    background-color: #f5c518;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+.description p i {
+    color: #f5c518;
+}
+
