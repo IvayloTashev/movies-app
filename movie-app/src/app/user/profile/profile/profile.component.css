@@ -1,0 +1,19 @@
+.profile-container {
+    text-align: center;
+    max-width: 1280px;
+    margin: auto;
+    color: white;
+}
+
+.account-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+.account-details-container i {
+    padding-right: 10px;
+    color: #FF3227;
+}
