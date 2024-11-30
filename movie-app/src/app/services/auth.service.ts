@@ -1,15 +1,17 @@
 import { inject, Injectable, signal } from '@angular/core';
 import { Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, updateProfile, user } from '@angular/fire/auth';
-import { from, Observable } from 'rxjs';
+import { from, Observable, switchMap } from 'rxjs';
 import { User } from '../types/user';
 import { Firestore, doc, setDoc } from '@angular/fire/firestore';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
   firestoreAuth = inject(Auth);
-  firestore = inject(Firestore)
+  firestore = inject(Firestore);
+  http = inject(HttpClient);
   user$ = user(this.firestoreAuth);
   currentUserSig = signal<User | null | undefined>(undefined);
 
@@ -36,6 +38,5 @@ export class AuthService {
     const promise = signOut(this.firestoreAuth);
     return from(promise);
   }
-
 
 }

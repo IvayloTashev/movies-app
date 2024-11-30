@@ -12,22 +12,22 @@ import { User } from './types/user';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'movie-app';
 
   constructor(private authService: AuthService) { }
 
-  ngOnInit(): void {
-    this.authService.user$.subscribe((user: User) => {
-      if (user) {
-        this.authService.currentUserSig.set({
-          email: user.email,
-          username: user.username,
-        });
-      } else {
-        this.authService.currentUserSig.set(null);
-      }
-    })
-  }
+  // ngOnInit(): void {
+  //   this.authService.user$.subscribe((user: User) => {
+  //     if (user) {
+  //       this.authService.currentUserSig.set({
+  //         email: user.email,
+  //         username: user.username,
+  //       });
+  //     } else {
+  //       this.authService.currentUserSig.set(null);
+  //     }
+  //   })
+  // }
 
 }

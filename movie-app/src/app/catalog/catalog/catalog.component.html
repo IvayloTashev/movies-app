@@ -9,10 +9,10 @@
         @for (movie of moviesCollection; track $index) {
         <div class="card">
             <div class="poster-holder">
-                <img src="{{movie.image}}" alt="">
+                <img src="{{movie.img}}" alt="">
             </div>
             <p>{{movie.title}}</p>
-            <a [routerLink]="movie.id">Details</a>
+            <a [routerLink]="movie._id">Details</a>
         </div>
         }
     </div>

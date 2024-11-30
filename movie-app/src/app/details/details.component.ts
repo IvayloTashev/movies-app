@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MoviesFirebaseService } from '../services/movies-firebase.service';
-import { MovieInteface } from '../types/movie';
+import { Movie, MovieInteface } from '../types/movie';
 import { ActivatedRoute } from '@angular/router';
 import { YouTubePlayerModule } from '@angular/youtube-player'
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-details',
@@ -12,15 +13,15 @@ import { YouTubePlayerModule } from '@angular/youtube-player'
   styleUrl: './details.component.css'
 })
 export class DetailsComponent implements OnInit {
-  movie = {} as MovieInteface;
+  movie = {} as Movie;
   private apiLoaded = false;
 
-  constructor(private moviesFirebaseService: MoviesFirebaseService, private route: ActivatedRoute) { }
+  constructor(private moviesFirebaseService: MoviesFirebaseService, private route: ActivatedRoute, private apiService: ApiService) { }
 
   ngOnInit(): void {
     const movieId = this.route.snapshot.params['movieId'];
 
-    this.moviesFirebaseService.getMovieById(movieId).subscribe((movieData) => {
+    this.apiService.getMovieById(movieId).subscribe((movieData) => {
       this.movie = movieData;
     })
 
