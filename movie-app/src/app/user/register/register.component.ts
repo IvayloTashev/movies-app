@@ -3,6 +3,9 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { EmailDirective } from '../../directives/email.directive';
+import { UserService } from '../../services/user.service';
+import { User } from '@angular/fire/auth';
+
 
 @Component({
   selector: 'app-register',
@@ -14,16 +17,14 @@ import { EmailDirective } from '../../directives/email.directive';
 export class RegisterComponent {
   errorMessage: string | null = null;
 
-  constructor(private router: Router, private authService: AuthService) { }
+  constructor(private router: Router, private authService: AuthService, private userService: UserService) { }
 
   register(form: NgForm) {
     if (form.invalid) {
       return;
     }
 
-    this.authService.register(
-      form.value.username, form.value.email, form.value.password
-    ).subscribe({
+    this.userService.register(form.value.username, form.value.email, form.value.password).subscribe({
       next: () => {
         this.router.navigate(['/home']);
       },
@@ -31,6 +32,17 @@ export class RegisterComponent {
         this.errorMessage = err.code;
       }
     });
+
+    // this.authService.register(
+    //   form.value.username, form.value.email, form.value.password
+    // ).subscribe({
+    //   next: () => {
+    //     this.router.navigate(['/home']);
+    //   },
+    //   error: (err) => {
+    //     this.errorMessage = err.code;
+    //   }
+    // });
   }
 
 }

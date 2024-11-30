@@ -3,6 +3,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { EmailDirective } from '../../directives/email.directive';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,7 @@ import { EmailDirective } from '../../directives/email.directive';
 export class LoginComponent {
   errorMessage: string | null = null;
 
-  constructor(private router: Router, private authService: AuthService) { }
+  constructor(private router: Router, private authService: AuthService, private userService: UserService) { }
 
   login(form: NgForm) {
 
@@ -22,17 +23,34 @@ export class LoginComponent {
       return;
     }
 
-    this.authService.login(
-      form.value.email, form.value.password
-    ).subscribe({
-      next: () => {
-        this.router.navigate(['/home']);
-      },
-      error: (err) => {
-        this.errorMessage = err.code;
-        console.log(this.errorMessage);
-      }
-    });
+    //TODO catch errors
+    this.userService.login(form.value.email, form.value.password).subscribe((data) => {
+      const token = data.accessToken;
+      localStorage.setItem('token', token);
+      this.router.navigate(['/']);
+    })
+
+    // this.userService.login(form.value.email, form.value.password).subscribe({
+    //   next: () => {
+    //     this.router.navigate(['/home']);
+    //   },
+    //   error: (err) => {
+    //     this.errorMessage = err.code;
+    //     console.log(this.errorMessage);
+    //   }
+    // })
+
+    // this.authService.login(
+    //   form.value.email, form.value.password
+    // ).subscribe({
+    //   next: () => {
+    //     this.router.navigate(['/home']);
+    //   },
+    //   error: (err) => {
+    //     this.errorMessage = err.code;
+    //     console.log(this.errorMessage);
+    //   }
+    // });
   }
 
 }
