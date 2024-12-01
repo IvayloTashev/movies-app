@@ -5,13 +5,30 @@
     <div class="register">
         <h1>Register</h1>
 
-        @if (errorMessage) {
+        <!-- TODO change with server error -->
+        <!-- @if (errorMessage) {
             <div>
                 @if(errorMessage === 'auth/email-already-in-use') {
                     <p class="firestore-error">
                         This email is already taken!
                     </p>
                 }
+            </div>
+        } -->
+
+        @if (inputUsername?.touched) {
+            <div>
+                @if (inputUsername?.errors?.['required']) {
+                <p class="error">
+                    Username is required!
+                </p>
+                }
+
+                @if (inputUsername?.errors?.['minlength']) {
+                    <p class="error">
+                        Username must be at least 3 characters!
+                    </p>
+                    }
             </div>
         }
 
@@ -25,7 +42,7 @@
 
                 @if (inputEmail?.errors?.['emailValidator']) {
                 <p class="error">
-                    {{'Email must be in this format example@gmail.com!'}}
+                    {{'Email must be in format example@abv.bg!'}}
                 </p>
                 }
             </div>
@@ -59,14 +76,16 @@
 
         <form class="form" #form="ngForm" (ngSubmit)="register(form)">
             <div class="input-container">
-                <label for="username">Username</label>
+                <label for="username">Username<span>*</span></label>
                 <input 
                     type="text" 
                     id="username" 
                     name="username"
                     placeholder="Username"
                     ngModel
-                    #inputUsername="ngModel" 
+                    #inputUsername="ngModel"
+                    required
+                    minlength="3"
                     />
             </div>
 
@@ -76,7 +95,7 @@
                     type="email" 
                     id="email" 
                     name="email"
-                    placeholder="Email"
+                    placeholder="example@abv.bg"
                     ngModel
                     #inputEmail="ngModel" 
                     required

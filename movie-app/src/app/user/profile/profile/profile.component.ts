@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../../services/auth.service';
 import { User } from '@angular/fire/auth';
 
 @Component({
@@ -9,15 +8,15 @@ import { User } from '@angular/fire/auth';
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.css'
 })
-export class ProfileComponent implements OnInit {
+export class ProfileComponent {
   userData: User | null = null;
 
-  constructor(private authService: AuthService) { }
+  constructor() { }
 
-  ngOnInit(): void {
-    this.authService.user$.subscribe((data: User | null) => {
-      this.userData = data;       
-    })
-  }
+  // ngOnInit(): void {
+  //   this.authService.user$.subscribe((data: User | null) => {
+  //     this.userData = data;       
+  //   })
+  // }
 
 }

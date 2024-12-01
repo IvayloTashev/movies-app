@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
-import { AuthService } from '../../services/auth.service';
 import { EmailDirective } from '../../directives/email.directive';
 import { UserService } from '../../services/user.service';
 
@@ -15,7 +14,7 @@ import { UserService } from '../../services/user.service';
 export class LoginComponent {
   errorMessage: string | null = null;
 
-  constructor(private router: Router, private authService: AuthService, private userService: UserService) { }
+  constructor(private router: Router, private userService: UserService) { }
 
   login(form: NgForm) {
 
@@ -23,34 +22,13 @@ export class LoginComponent {
       return;
     }
 
-    //TODO catch errors
+    //TODO catch backend errors
     this.userService.login(form.value.email, form.value.password).subscribe((data) => {
       const token = data.accessToken;
-      localStorage.setItem('token', token);
+      localStorage.setItem('X-Authorization', token);
       this.router.navigate(['/']);
     })
 
-    // this.userService.login(form.value.email, form.value.password).subscribe({
-    //   next: () => {
-    //     this.router.navigate(['/home']);
-    //   },
-    //   error: (err) => {
-    //     this.errorMessage = err.code;
-    //     console.log(this.errorMessage);
-    //   }
-    // })
-
-    // this.authService.login(
-    //   form.value.email, form.value.password
-    // ).subscribe({
-    //   next: () => {
-    //     this.router.navigate(['/home']);
-    //   },
-    //   error: (err) => {
-    //     this.errorMessage = err.code;
-    //     console.log(this.errorMessage);
-    //   }
-    // });
   }
 
 }

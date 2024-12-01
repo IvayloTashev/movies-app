@@ -1,11 +1,8 @@
 import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
-import { AuthService } from '../../services/auth.service';
 import { EmailDirective } from '../../directives/email.directive';
 import { UserService } from '../../services/user.service';
-import { User } from '@angular/fire/auth';
-
 
 @Component({
   selector: 'app-register',
@@ -17,32 +14,20 @@ import { User } from '@angular/fire/auth';
 export class RegisterComponent {
   errorMessage: string | null = null;
 
-  constructor(private router: Router, private authService: AuthService, private userService: UserService) { }
+  constructor(private router: Router, private userService: UserService) { }
 
   register(form: NgForm) {
     if (form.invalid) {
       return;
     }
 
-    this.userService.register(form.value.username, form.value.email, form.value.password).subscribe({
-      next: () => {
-        this.router.navigate(['/home']);
-      },
-      error: (err) => {
-        this.errorMessage = err.code;
-      }
-    });
+    //TODO catch backend errors
+    this.userService.register(form.value.username, form.value.email, form.value.password).subscribe((data) => {
+      const token = data.accessToken;
+      localStorage.setItem('X-Authorization', token);
+      this.router.navigate(['/']);
+    })
 
-    // this.authService.register(
-    //   form.value.username, form.value.email, form.value.password
-    // ).subscribe({
-    //   next: () => {
-    //     this.router.navigate(['/home']);
-    //   },
-    //   error: (err) => {
-    //     this.errorMessage = err.code;
-    //   }
-    // });
   }
 
 }
