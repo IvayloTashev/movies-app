@@ -10,20 +10,16 @@
         </div>
 
         <div class="trailer-holder">
-            <youtube-player 
-            [videoId]="movie.trailer"
-            [width]="756"
-            [height]="414"
-            class="youtube-video"
-          ></youtube-player>
+            <youtube-player [videoId]="movie.trailer" [width]="756" [height]="414"
+                class="youtube-video"></youtube-player>
         </div>
     </div>
 
     <div class="description">
         <div class="genre-container">
             <ul>
-                @for (genre of movie.genre; track $index) {
-                <li>{{genre}}</li>
+                @for (genre of movie.genre | splitString: ","; track $index) {
+                    <li>{{genre}}</li>
                 }
             </ul>
         </div>
@@ -32,9 +28,5 @@
         <p>Director: {{movie.director}}</p>
         <p><span>IMDb</span> rating: {{movie.rating}} / 10 <i class="fa-solid fa-star"></i></p>
     </div>
-
-
-
-    <!-- TODO comments -->
 
 </div>

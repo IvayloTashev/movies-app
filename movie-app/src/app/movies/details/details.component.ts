@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { MoviesFirebaseService } from '../services/movies-firebase.service';
-import { Movie, MovieInteface } from '../types/movie';
+import { Movie } from '../../types/movie';
 import { ActivatedRoute } from '@angular/router';
 import { YouTubePlayerModule } from '@angular/youtube-player'
-import { ApiService } from '../services/api.service';
+import { ApiService } from '../../services/api.service';
+import { SplitStringPipe } from '../../shared/pipes/split-string.pipe';
 
 @Component({
   selector: 'app-details',
   standalone: true,
-  imports: [YouTubePlayerModule],
+  imports: [YouTubePlayerModule, SplitStringPipe],
   templateUrl: './details.component.html',
   styleUrl: './details.component.css'
 })
@@ -16,7 +16,7 @@ export class DetailsComponent implements OnInit {
   movie = {} as Movie;
   private apiLoaded = false;
 
-  constructor(private moviesFirebaseService: MoviesFirebaseService, private route: ActivatedRoute, private apiService: ApiService) { }
+  constructor(private route: ActivatedRoute, private apiService: ApiService) { }
 
   ngOnInit(): void {
     const movieId = this.route.snapshot.params['movieId'];

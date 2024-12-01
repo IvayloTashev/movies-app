@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Movie, MovieInteface } from '../../types/movie';
-import { MoviesFirebaseService } from '../../services/movies-firebase.service';
+import { Movie} from '../../types/movie';
 import { RouterLink } from '@angular/router';
 import { ApiService } from '../../services/api.service';
 
@@ -15,13 +14,7 @@ export class CatalogComponent implements OnInit {
 
   moviesCollection: Movie[] = [];
 
-  constructor(private moviesFirebaseService: MoviesFirebaseService, private apiService: ApiService) { }
-
-  // ngOnInit(): void {
-  //   this.moviesFirebaseService.getMovies().subscribe(movies => {
-  //     this.moviesCollection = movies;
-  //   })
-  // }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
     this.apiService.getMovies().subscribe((movies) => {
