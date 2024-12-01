@@ -3,24 +3,32 @@ import { HeroSectionComponent } from './shared/hero-section/hero-section.compone
 import { NotFoundComponent } from './error/not-found/not-found.component';
 import { LoginComponent } from './user/login/login.component';
 import { RegisterComponent } from './user/register/register.component';
-import { CatalogComponent } from './catalog/catalog/catalog.component';
-import { DetailsComponent } from './details/details.component';
+import { CatalogComponent } from './movies/catalog/catalog.component';
+import { DetailsComponent } from './movies/details/details.component';
 import { ProfileComponent } from './user/profile/profile/profile.component';
+import { ErrorMessageComponent } from './core/error-message/error-message.component';
+import { CreateComponent } from './movies/create/create.component';
+
 
 export const routes: Routes = [
-    {path: '', redirectTo: '/home', pathMatch: 'full'},
-    {path: 'home', component: HeroSectionComponent},
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: 'home', component: HeroSectionComponent },
 
-    {path: 'login', component: LoginComponent},
-    {path: 'register', component: RegisterComponent},
+    { path: 'login', component: LoginComponent },
+    { path: 'register', component: RegisterComponent },
 
-    {path: 'catalog', children: [
-        {path: '', component: CatalogComponent },
-        {path: ':movieId', component: DetailsComponent }
-    ]},
+    {
+        path: 'catalog', children: [
+            { path: '', component: CatalogComponent },
+            { path: ':movieId', component: DetailsComponent }
+        ]
+    },
 
-    {path: 'profile', component: ProfileComponent},
+    { path: 'create', component: CreateComponent },
 
-    {path: '404', component: NotFoundComponent},
-    {path: '**', redirectTo: '/404'},
+    { path: 'profile', component: ProfileComponent },
+
+    { path: 'error', component: ErrorMessageComponent },
+    { path: '404', component: NotFoundComponent },
+    { path: '**', redirectTo: '/404' },
 ];
