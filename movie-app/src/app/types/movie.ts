@@ -17,7 +17,7 @@ export interface Movie {
     img: string,
     trailer: string,
     rating: string,
-    genre:  string[],
+    genre:  string,
     director: string,
     comments: [],
     _createdOn: string,

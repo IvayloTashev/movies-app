@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from '../../environments/environment.development';
 import { Movie } from '../types/movie';
 
 @Injectable({
@@ -11,13 +10,23 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   getMovies() {
-    let url = `${environment.apiUrl}/movies`;
-    return this.http.get<Movie[]>(url);
+    return this.http.get<Movie[]>(`/api/data/movies`);
   }
 
   getMovieById(id: string) {
-    let url = `${environment.apiUrl}/movies/${id}`;
-    return this.http.get<Movie>(url);
+    return this.http.get<Movie>(`/api/data/movies/${id}`);
+  }
+
+  createMovie(
+    title: string,
+    description: string,
+    img: string,
+    trailer: string,
+    rating: string,
+    genre:  string,
+    director: string,
+  ) {
+    return this.http.post<Movie>(`/api/data/movies`, {title, description, img, trailer, rating, genre, director});
   }
 
 }
