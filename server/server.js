@@ -1497,10 +1497,7 @@
                 img: "https://m.media-amazon.com/images/M/MV5BOTgyOGQ1NDItNGU3Ny00MjU3LTg2YWEtNmEyYjBiMjI1Y2M5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
                 trailer: "qtRKdVHc-cE",
                 rating: "8.8",
-                genre: [
-                    "Drama",
-                    "Thriller"
-                ],
+                genre: "Drama, Thriller",
                 director: "David Fincher",
                 comments: [],
                 _createdOn: 1732875212420,
@@ -1514,11 +1511,7 @@
                 img: "https://play-lh.googleusercontent.com/Odv1QnJMznTD_SRuatFVgE6b2Lgt_BGb8TUBMjsNl-gJi3bnxLXgnusGXWHkFGihsJdTde9ucIhNwMPHbkAF",
                 trailer: "JfVOs4VSpmA",
                 rating: "8.2",
-                genre: [
-                    "Action",
-                    "Adventure",
-                    "Fantasy"
-                ],
+                genre: "Action, Adventure, Fantasy",
                 director: "Jon Watts",
                 comments: [],
                 _createdOn: 1732875437672,
@@ -1532,9 +1525,7 @@
                 img: "https://m.media-amazon.com/images/M/MV5BMDAyY2FhYjctNDc5OS00MDNlLThiMGUtY2UxYWVkNGY2ZjljXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
                 trailer: "6hB3S9bIaco",
                 rating: "9.3",
-                genre: [
-                    "Drama"
-                ],
+                genre: "Drama",
                 director: "Frank Darabont",
                 comments: [],
                 _createdOn: 1732875515470,
@@ -1548,10 +1539,7 @@
                 img: "https://m.media-amazon.com/images/M/MV5BYTJkNGQyZDgtZDQ0NC00MDM0LWEzZWQtYzUzZDEwMDljZWNjXkEyXkFqcGc@._V1_.jpg",
                 trailer: "sY1S34973zA",
                 rating: "9.2",
-                genre: [
-                    "Crime",
-                    "Drama"
-                ],
+                genre: "Crime, Drama",
                 director: "Francis Ford Coppola",
                 comments: [],
                 _createdOn: 1732875542254,
@@ -1565,11 +1553,7 @@
                 img: "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg",
                 trailer: "YoHD9XEInc0",
                 rating: "8.8",
-                genre: [
-                    "Action",
-                    "Adventure",
-                    "Sci-Fi"
-                ],
+                genre: "Action, Adventure, Sci-Fi",
                 director: "Christopher Nolan",
                 comments: [],
                 _createdOn: 1732875574277,
@@ -1583,11 +1567,7 @@
                 img: "https://musicart.xboxlive.com/7/abb02f00-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080",
                 trailer: "EXeTwQWrcwY",
                 rating: "9.0",
-                genre: [
-                    "Action",
-                    "Crime",
-                    "Drama"
-                ],
+                genre: "Action, Crime, Drama",
                 director: "Christopher Nolan",
                 comments: [],
                 _createdOn: 1732875609233,
@@ -1601,10 +1581,7 @@
                 img: "https://m.media-amazon.com/images/M/MV5BYTViYTE3ZGQtNDBlMC00ZTAyLTkyODMtZGRiZDg0MjA2YThkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
                 trailer: "s7EdQ4FqbhY",
                 rating: "8.9",
-                genre: [
-                    "Crime",
-                    "Drama"
-                ],
+                genre: "Crime, Drama",
                 director: "Quentin Tarantino",
                 comments: [],
                 _createdOn: 1732875632437,
@@ -1618,10 +1595,7 @@
                 img: "https://m.media-amazon.com/images/M/MV5BN2NmN2VhMTQtMDNiOS00NDlhLTliMjgtODE2ZTY0ODQyNDRhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
                 trailer: "vKQi3bBA1y8",
                 rating: "8.7",
-                genre: [
-                    "Action",
-                    "Sci-Fi"
-                ],
+                genre: "Action, Sci-Fi",
                 director: "The Wachowskis",
                 comments: [],
                 _createdOn: 1732875655050,
@@ -1635,10 +1609,7 @@
                 img: "https://m.media-amazon.com/images/M/MV5BNDYwNzVjMTItZmU5YS00YjQ5LTljYjgtMjY2NDVmYWMyNWFmXkEyXkFqcGc@._V1_.jpg",
                 trailer: "bLvqoHBptjg",
                 rating: "8.8",
-                genre: [
-                    "Drama",
-                    "Romance"
-                ],
+                genre: "Drama, Romance",
                 director: "Robert Zemeckis",
                 comments: [],
                 _createdOn: 1732875686279,
@@ -1652,11 +1623,7 @@
                 img: "https://m.media-amazon.com/images/M/MV5BMTZkMjBjNWMtZGI5OC00MGU0LTk4ZTItODg2NWM3NTVmNWQ4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
                 trailer: "r5X-hFf6Bwo",
                 rating: "8.9",
-                genre: [
-                    "Action",
-                    "Adventure",
-                    "Drama"
-                ],
+                genre: "Action, Adventure, Drama",
                 director: "Peter Jackson",
                 comments: [],
                 _createdOn: 1732875710296,
