@@ -15,18 +15,27 @@
         </div>
     </div>
 
-    <div class="description">
-        <div class="genre-container">
-            <ul>
-                @for (genre of movie.genre | splitString: ","; track $index) {
-                    <li>{{genre}}</li>
-                }
-            </ul>
+    <div class="descriptionAndBts">
+        <div class="description">
+            <div class="genre-container">
+                <ul>
+                    @for (genre of movie.genre | splitString: ","; track $index) {
+                        <li>{{genre}}</li>
+                    }
+                </ul>
+            </div>
+    
+            <p>{{movie.description}}</p>
+            <p>Director: {{movie.director}}</p>
+            <p><span>IMDb</span> rating: {{movie.rating}} / 10 <i class="fa-solid fa-star"></i></p>
         </div>
 
-        <p>{{movie.description}}</p>
-        <p>Director: {{movie.director}}</p>
-        <p><span>IMDb</span> rating: {{movie.rating}} / 10 <i class="fa-solid fa-star"></i></p>
+            @if (user?._id === movie._ownerId) {
+                <div class="btns">
+                    <button class="edit" [routerLink]="['/edit/', movie._id]"><i class="fa-solid fa-pen-to-square"></i> Edit</button>
+                    <button class="delete" (click)="deleteMovie()"><i class="fa-solid fa-trash"></i> Delete</button>
+                </div>
+            }
     </div>
 
 </div>

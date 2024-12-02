@@ -57,7 +57,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 70%;
+    flex: 0 0 70%;
 }
 
 .description p {
@@ -76,3 +76,35 @@
     color: #f5c518;
 }
 
+.descriptionAndBts {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btns {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    justify-content: end;
+}
+
+.btns button {
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 0 15px 15px 15px;
+    background-color: black;
+    color: white;
+    border: 2px solid rgb(180, 180, 180);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.btns .edit:hover {
+    background-color: rgb(185, 121, 0);
+}
+
+.btns .delete:hover {
+    background-color: #FF3227;
+}
