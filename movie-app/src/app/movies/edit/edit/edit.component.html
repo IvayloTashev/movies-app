@@ -1,0 +1,181 @@
+<div class="create-container">
+
+    <div class="img-holder">
+        <img src="create.jpg" alt="background image">
+    </div>
+
+    <div class="create">
+
+        <h1>Edit movie</h1>
+
+        @if (inputTitle?.touched) {
+            <div>
+                @if (inputTitle?.errors?.['required']) {
+                <p class="error">
+                    Title is required!
+                </p>
+                }
+            </div>
+        }
+
+        @if (inputDescription?.touched) {
+            <div>
+                @if (inputDescription?.errors?.['required']) {
+                <p class="error">
+                    Description is required!
+                </p>
+                }
+            </div>
+        }
+
+        @if (inputImage?.touched) {
+            <div>
+                @if (inputImage?.errors?.['required']) {
+                <p class="error">
+                    Image is required!
+                </p>
+                }
+            </div>
+        }
+
+        @if (inputTrailer?.touched) {
+            <div>
+                @if (inputTrailer?.errors?.['required']) {
+                <p class="error">
+                    Trailer is required!
+                </p>
+                }
+            </div>
+        }
+
+        @if (inputRating?.touched) {
+            <div>
+                @if (inputRating?.errors?.['required']) {
+                <p class="error">
+                    Rating is required!
+                </p>
+                }
+            </div>
+        }
+
+        @if (inputGenre?.touched) {
+            <div>
+                @if (inputGenre?.errors?.['required']) {
+                <p class="error">
+                    Genre is required!
+                </p>
+                }
+            </div>
+        }
+
+        @if (inputDirector?.touched) {
+            <div>
+                @if (inputDirector?.errors?.['required']) {
+                <p class="error">
+                    Director is required!
+                </p>
+                }
+            </div>
+        }
+
+        <form #form="ngForm" (ngSubmit)="editMovie(form)">
+
+            <div class="input-container">
+                <label for="title">Title<span>*</span></label>
+                <input 
+                    type="text" 
+                    id="title" 
+                    name="title"
+                    placeholder="Add movie title"
+                    [(ngModel)]="movie.title" 
+                    #inputTitle="ngModel"
+                    required
+                    />
+            </div>
+
+            <div class="input-container">
+                <label for="description">Description<span>*</span></label>
+                <input 
+                    type="text" 
+                    id="description" 
+                    name="description"
+                    placeholder="Add movie description"
+                    [(ngModel)]="movie.description" 
+                    #inputDescription="ngModel"
+                    required
+                    />
+            </div>
+
+            <div class="input-container">
+                <label for="image">Image<span>*</span></label>
+                <input 
+                    type="text" 
+                    id="image" 
+                    name="image"
+                    placeholder="Add movie image (link)"
+                    [(ngModel)]="movie.img" 
+                    #inputImage="ngModel"
+                    required
+                    />
+            </div>
+
+            <div class="input-container">
+                <label for="trailer">Trailer<span>*</span></label>
+                <input 
+                    type="text" 
+                    id="trailer" 
+                    name="trailer"
+                    placeholder="Add YouTube code. The code is between 'watch?v=' and '&t='."
+                    [(ngModel)]="movie.trailer" 
+                    #inputTrailer="ngModel"
+                    required
+                    />
+            </div>
+
+            <div class="input-container">
+                <label for="rating">Rating<span>*</span></label>
+                <input 
+                    type="text" 
+                    id="rating" 
+                    name="rating"
+                    placeholder="Add rating from IMDb"
+                    [(ngModel)]="movie.rating" 
+                    #inputRating="ngModel"
+                    required
+                    />
+            </div>
+
+            <div class="input-container">
+                <label for="genre">Genre<span>*</span></label>
+                <input 
+                    type="text" 
+                    id="genre" 
+                    name="genre"
+                    placeholder="Add genres separeted by comma"
+                    [(ngModel)]="movie.genre" 
+                    #inputGenre="ngModel"
+                    required
+                    />
+            </div>
+
+            <div class="input-container">
+                <label for="director">Director<span>*</span></label>
+                <input 
+                    type="text" 
+                    id="director" 
+                    name="director"
+                    placeholder="Add director"
+                    [(ngModel)]="movie.director" 
+                    #inputDirector="ngModel"
+                    required
+                    />
+            </div>
+
+            <button><i class="fa-regular fa-floppy-disk"></i> Save</button>
+
+        </form>
+
+    </div>
+    
+</div>
+
