@@ -8,14 +8,17 @@ import { DetailsComponent } from './movies/details/details.component';
 import { ProfileComponent } from './user/profile/profile/profile.component';
 import { ErrorMessageComponent } from './core/error-message/error-message.component';
 import { CreateComponent } from './movies/create/create.component';
+import { EditComponent } from './movies/edit/edit/edit.component';
+import { guestAuthGuard } from './guards/guest.guard';
+import { userAuthGuard } from './guards/user.guard';
 
 
 export const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: HeroSectionComponent },
 
-    { path: 'login', component: LoginComponent },
-    { path: 'register', component: RegisterComponent },
+    { path: 'login', canActivate: [userAuthGuard], component: LoginComponent },
+    { path: 'register', canActivate: [userAuthGuard], component: RegisterComponent },
 
     {
         path: 'catalog', children: [
@@ -24,9 +27,10 @@ export const routes: Routes = [
         ]
     },
 
-    { path: 'create', component: CreateComponent },
+    { path: 'create', canActivate: [guestAuthGuard], component: CreateComponent },
+    { path: 'edit/:movieId', canActivate: [guestAuthGuard], component: EditComponent },
 
-    { path: 'profile', component: ProfileComponent },
+    { path: 'profile', canActivate: [guestAuthGuard], component: ProfileComponent },
 
     { path: 'error', component: ErrorMessageComponent },
     { path: '404', component: NotFoundComponent },
