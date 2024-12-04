@@ -18,6 +18,10 @@ export class DetailsComponent implements OnInit {
   movie = {} as Movie;
   user = {} as User | null;
   movieId: string = '';
+
+  //TODO remove Any type
+  comments: any = [];
+  
   private apiLoaded = false;
 
   constructor(private activatedRoute: ActivatedRoute, private apiService: ApiService, private userService: UserService, private router: Router) { }
@@ -40,6 +44,16 @@ export class DetailsComponent implements OnInit {
       document.body.appendChild(tag);
       this.apiLoaded = true;
     }
+
+    this.apiService.getAllComments(this.movieId).subscribe({
+      next: (commentsData) => {
+        this.comments = commentsData;
+        console.log(this.comments);
+      },
+      error: (err) => {
+        console.error('Error fetching comments:', err);
+      },
+    });
   };
 
   deleteMovie() {
