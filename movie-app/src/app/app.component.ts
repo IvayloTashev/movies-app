@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
@@ -13,18 +13,4 @@ import { AuthenticateComponent } from './authenticate/authenticate.component';
 })
 export class AppComponent {
   title = 'movie-app';
-
-  // ngOnInit(): void {
-  //   this.authService.user$.subscribe((user: User) => {
-  //     if (user) {
-  //       this.authService.currentUserSig.set({
-  //         email: user.email,
-  //         username: user.username,
-  //       });
-  //     } else {
-  //       this.authService.currentUserSig.set(null);
-  //     }
-  //   })
-  // }
-
 }
