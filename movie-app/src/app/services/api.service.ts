@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Movie } from '../types/movie';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +9,8 @@ import { Movie } from '../types/movie';
 export class ApiService {
 
   constructor(private http: HttpClient) { }
+
+  //MOVIES
 
   getMovies() {
     return this.http.get<Movie[]>(`/api/data/movies`);
@@ -44,6 +47,15 @@ export class ApiService {
 
   deleteMovie(movieId: string) {
     return this.http.delete(`/api/data/movies/${movieId}`);
+  }
+
+    //COMMENTS
+
+  getAllComments(movieId: string): Observable<Comment[]> {
+    const encodedMovieId = encodeURIComponent(`movieId="${movieId}"`);
+    const loadParam = encodeURIComponent('author=_ownerId:users');
+    const url = `/api/data/comments?where=${encodedMovieId}&load=${loadParam}`;
+    return this.http.get<Comment[]>(url);
   }
 
 }
