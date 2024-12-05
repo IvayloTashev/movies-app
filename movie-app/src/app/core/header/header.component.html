@@ -19,7 +19,7 @@
                     @if(isLoggedIn) {
                         <a routerLink="/profile">Profile</a>
                         <a routerLink="/create">Add Movie</a>
-                        <button (click)="logout()">Logout</button>
+                        <button class="logout" (click)="logout()">Logout <i class="fa-solid fa-arrow-right-from-bracket"></i></button>
                     } @else {
                         <a routerLink="/login">Login</a>
                         <a routerLink="/register">Register</a>
