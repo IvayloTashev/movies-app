@@ -42,11 +42,81 @@
     <div class="comments-container">
         <h2>Comments section</h2>
 
+        @if (comments.length > 0) {
         @for (comment of comments; track $index) {
         <div class="comment-holder">
-            <p class="author">{{comment.author.username}} <i class="fa-solid fa-comment-dots"></i></p>
+            <div class="comment-header">
+                <p class="author">{{comment.author.username}} <i class="fa-solid fa-comment-dots"></i></p>
+
+                @if(user?._id === comment._ownerId){
+                    <div class="update-delete">
+                        <button type="button" (click)="editCommentToggle(comment._id, comment.content)"><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button type="button" (click)="deleteComment(comment._id)"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                }
+            </div>
             <p class="comment">{{comment.content}}</p>
         </div>
+        }
+        } @else {
+            <div class="empty-comment-holder">
+                <p class="comment">There are no comments yet and you can add the first one.</p>
+            </div>
+
+        }
+
+        @if (isWritingComment) {
+            <div class="write-comment">
+                <form #form="ngForm" (ngSubmit)="addComment(form)">
+                    <div class="input-container">
+                        <input 
+                            type="text" 
+                            id="comment" 
+                            name="comment"
+                            placeholder="Add your comment..."
+                            ngModel
+                            #inputComment="ngModel"
+                            maxlength="120"
+                            minlength="1"
+                            required
+                            />
+                    </div>
+                    <div class="btns-comments">
+                        <button class="add">Add</button>
+                        <button type="button" class="cancel" (click)="addCommentToggle()">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        }
+
+        @if (isEditingComment) {
+            <div class="write-comment">
+                <form #editForm="ngForm" (ngSubmit)="updateComment(editForm)">
+                    <div class="input-container">
+                        <input 
+                            type="text" 
+                            id="editComment" 
+                            name="editComment"
+                            placeholder="Add your comment..."
+                            [(ngModel)]="editingCommentContent"
+                            #inputEditComment="ngModel"
+                            maxlength="120"
+                            minlength="1"
+                            required
+                            />
+                    </div>
+                    <div class="btns-comments">
+                        <button class="add">Update</button>
+                        <button type="button" class="cancel" (click)="editCommentToggle('', '')">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        }
+
+        @if (user) {
+            <div class="bts-container">
+                <button (click)="addCommentToggle()">Add comment</button>
+            </div>
         }
 
     </div>

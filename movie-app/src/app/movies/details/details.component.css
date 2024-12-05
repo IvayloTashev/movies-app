@@ -113,7 +113,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding-top: 30px;
+    padding: 30px 0;
     width: 90%;
 }
 
@@ -135,7 +135,6 @@
 
 .author {
     font-size: 1.4rem;
-
 }
 
 p.author i {
@@ -147,4 +146,105 @@ p.author i {
 .comment {
     font-size: 1.2rem;
     padding-left: 20px;
+}
+
+.bts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+}
+
+.bts-container button {
+    border: none;
+    padding: 8px 15px;
+    border-radius: 15px;
+    border: 2px solid white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+    background-color: black;
+}
+
+.bts-container button:hover {
+    background-color: green;
+}
+
+.write-comment {
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.input-container {
+    flex: 0 0 calc(80% - 5px);
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    height: 50px;
+    background-color: rgb(253, 225, 189);
+}
+
+.input-container input:focus {
+    outline: none;
+}
+
+.btns-comments {
+    flex: 0 0 calc(20% - 5px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: end;
+}
+
+.btns-comments button {
+    border: 1px solid white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 80px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: black;
+    color: white;
+}
+
+.btns-comments button.add:hover {
+    background-color: green;
+}
+
+.btns-comments button.cancel:hover {
+    background-color: #FF3227
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.update-delete {
+    display: flex;
+    gap: 10px;
+}
+
+.update-delete button{
+    padding: 5px;
+    font-size: 1.2rem;
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+.update-delete button:nth-of-type(1):hover {
+    color: #f5c518;
+}
+
+.update-delete button:nth-of-type(2):hover {
+    color: #FF3227;
 }
