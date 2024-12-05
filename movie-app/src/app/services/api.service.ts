@@ -10,8 +10,7 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  //MOVIES
-
+  //MOVIES ---------------------------------------------------------------------------
   getMovies() {
     return this.http.get<Movie[]>(`/api/data/movies`);
   };
@@ -49,13 +48,24 @@ export class ApiService {
     return this.http.delete(`/api/data/movies/${movieId}`);
   }
 
-    //COMMENTS
-
+  //COMMENTS ---------------------------------------------------------------------------
   getAllComments(movieId: string): Observable<Comment[]> {
     const encodedMovieId = encodeURIComponent(`movieId="${movieId}"`);
     const loadParam = encodeURIComponent('author=_ownerId:users');
     const url = `/api/data/comments?where=${encodedMovieId}&load=${loadParam}`;
     return this.http.get<Comment[]>(url);
+  }
+
+  createComment(movieId: string, content: string): Observable<Comment> {
+    return this.http.post<Comment>('/api/data/comments', { movieId, content });
+  }
+
+  updateComment(commentId: string, content: string): Observable<Comment> {
+    return this.http.patch<Comment>(`/api/data/comments/${commentId}`, {content});
+  }
+
+  deleteComment(commentId: string): Observable<Comment> {
+    return this.http.delete<Comment>(`/api/data/comments/${commentId}`)
   }
 
 }
