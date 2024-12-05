@@ -1403,17 +1403,46 @@
         comments: {
             "0a272c58-b7ea-4e09-a000-7ec988248f66": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-                content: "Great movie!",
+                content: "Absolutely loved this movie! The plot twists kept me on the edge of my seat.",
                 movieId: "9a7e206a-3bfc-44c7-97ab-90c3de21e24e",
                 _createdOn: 1614260681375,
                 _id: "0a272c58-b7ea-4e09-a000-7ec988248f66"
             },
-            " af6c0a08-07a0-4a4c-8dc4-1897fbf480cb": {
+
+            "8e428872-3550-4a12-ae15-c0c84a4cb7e4": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                movieId: "8cc4a712-d46d-4053-bd02-3602d49cda96",
+                content: "A must-watch for science fiction enthusiasts. The special effects were mind-blowing!",
+                _createdOn: 1733392752749,
+                _id: "8e428872-3550-4a12-ae15-c0c84a4cb7e4"
+            },
+            "d064e268-2b18-401b-a8c5-b4b97e444b58": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-                content: "You are right",
-                movieId: "9a7e206a-3bfc-44c7-97ab-90c3de21e24e",
-                _createdOn: 1733343095868,
-                _id: "af6c0a08-07a0-4a4c-8dc4-1897fbf480cb"
+                movieId: "f92e00b0-1456-41e5-9a0d-7fe790d5ae5f",
+                content: "Hands down the best thriller I've seen this year. Highly recommend!",
+                _createdOn: 1733392797507,
+                _id: "d064e268-2b18-401b-a8c5-b4b97e444b58"
+            },
+            "c5eaa574-f44d-48f8-b659-145972bc0ecc": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                movieId: "f92e00b0-1456-41e5-9a0d-7fe790d5ae5f",
+                content: "Reminded me of classic movies from the 80s. A beautiful nod to nostalgia.",
+                _createdOn: 1733392863099,
+                _id: "c5eaa574-f44d-48f8-b659-145972bc0ecc"
+            },
+            "d9b2d368-eecf-4ee8-9f0d-4693ae7009c0": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                movieId: "138682c6-2cb7-4bf9-ba6b-69cd28c8545f",
+                content: "It was okay, but nothing to write home about. Just another average movie.",
+                _createdOn: 1733392914009,
+                _id: "d9b2d368-eecf-4ee8-9f0d-4693ae7009c0"
+            },
+            "4d14e5f3-8d94-44f6-bd2a-e65b6068bd5c": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                movieId: "2a5158ba-85dd-40b8-9c9c-70164cdfb340",
+                content: "This deserves all the awards. Simply brilliant!",
+                _createdOn: 1733393361990,
+                _id: "4d14e5f3-8d94-44f6-bd2a-e65b6068bd5c"
             }
         },
         records: {
@@ -1635,6 +1664,18 @@
                 comments: [],
                 _createdOn: 1732875710296,
                 _id: "ebbe5d81-faa3-4d92-b1ad-78a93bdf82e3"
+            },
+            "f92e00b0-1456-41e5-9a0d-7fe790d5ae5f": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                title: "Goodfellas",
+                description: "The story of Henry Hill and his life in the mafia, covering his relationship with his wife Karen and his mob partners Jimmy Conway and Tommy DeVito.",
+                img: "https://m.media-amazon.com/images/M/MV5BN2E5NzI2ZGMtY2VjNi00YTRjLWI1MDUtZGY5OWU1MWJjZjRjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                trailer: "2ilzidi_J8Q",
+                rating: "8.7",
+                genre: "Drama, Crime, Gangster",
+                director: "Martin Scorsese",
+                _createdOn: 1733347173074,
+                _id: "f92e00b0-1456-41e5-9a0d-7fe790d5ae5f"
             }
         },
         likes: {
