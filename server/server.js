@@ -1676,6 +1676,66 @@
                 director: "Martin Scorsese",
                 _createdOn: 1733347173074,
                 _id: "f92e00b0-1456-41e5-9a0d-7fe790d5ae5f"
+            },
+            "ff86d28f-66bf-4793-a497-38e574987385": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                title: "Interstellar",
+                description: "When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.",
+                img: "https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                trailer: "zSWdZVtXT7E",
+                rating: "8.7",
+                genre: "Sci-Fi, Drama, Adventure",
+                director: "Christopher Nolan",
+                _createdOn: 1733435571227,
+                _id: "ff86d28f-66bf-4793-a497-38e574987385"
+            },
+            "dc402cf9-4ce3-4fd3-8581-06d80a3fd7a4": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                title: "Se7en",
+                description: "Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives.",
+                img: "https://m.media-amazon.com/images/M/MV5BY2IzNzMxZjctZjUxZi00YzAxLTk3ZjMtODFjODdhMDU5NDM1XkEyXkFqcGc@._V1_.jpg",
+                trailer: "znmZoVkCjpI",
+                rating: "8.6",
+                genre: "Crime, Drama, Mystery, Thriller",
+                director: "David Fincher",
+                _createdOn: 1733435829665,
+                _id: "dc402cf9-4ce3-4fd3-8581-06d80a3fd7a4"
+            },
+            "ba8d9631-f3f4-4f24-98cb-4339c66929c6": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                title: "Saving Private Ryan",
+                description: "Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.",
+                img: "https://m.media-amazon.com/images/M/MV5BZGZhZGQ1ZWUtZTZjYS00MDJhLWFkYjctN2ZlYjE5NWYwZDM2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                trailer: "S1Qj_AVu2pA",
+                rating: "8.6",
+                genre: "Epic, Drama, War",
+                director: "Steven Spielberg",
+                _createdOn: 1733435965240,
+                _id: "ba8d9631-f3f4-4f24-98cb-4339c66929c6"
+            },
+            "07ec6aa2-2eca-4dba-a984-fb4635805e5a": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                title: "Gladiator",
+                description: "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.",
+                img: "https://m.media-amazon.com/images/M/MV5BYWQ4YmNjYjEtOWE1Zi00Y2U4LWI4NTAtMTU0MjkxNWQ1ZmJiXkEyXkFqcGc@._V1_.jpg",
+                trailer: "P5ieIbInFpg",
+                rating: "8.5",
+                genre: "Drama, Action, Anventure, Epic",
+                director: "Ridley Scott",
+                _createdOn: 1733436132939,
+                _id: "07ec6aa2-2eca-4dba-a984-fb4635805e5a"
+            },
+            "dea60537-b51b-46bd-820a-467e45fb956c": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                title: "The Prestige",
+                description: "Rival 19th-century magicians engage in a bitter battle for trade secrets.",
+                img: "https://m.media-amazon.com/images/M/MV5BMjA4NDI0MTIxNF5BMl5BanBnXkFtZTYwNTM0MzY2._V1_.jpg",
+                trailer: "ELq7V8vkekI",
+                rating: "8.5",
+                genre: "Tragedy, Drama, Mystery, Thriller",
+                director: "Christopher Nolan",
+                _createdOn: 1733436268870,
+                _id: "dea60537-b51b-46bd-820a-467e45fb956c"
             }
         },
         likes: {

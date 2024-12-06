@@ -1,8 +1,33 @@
 <div class="profile-container">
 
     <div class="account-details-container">
-        <p><i class="fa-regular fa-user"></i>{{userData?.displayName}}</p>
+        <p><i class="fa-regular fa-user"></i>{{userData?.username}}</p>
         <p><i class="fa-regular fa-envelope"></i>{{userData?.email}}</p>
+    </div>
+
+    <div class="movies-container">
+
+        <div class="header-container">
+            @if(userMovies == undefined || userMovies.length == 0) {
+                <h1>You haven't added any movies yet. You can do it from here <a routerLink="/create">add movie</a></h1>
+            } @else {
+                <h1>Collection of added movies</h1>
+            }
+        </div>
+
+        <div class="card-container">
+            @for (movie of userMovies; track $index) {
+            <div class="card">
+                <div class="poster-holder">
+                    <a [routerLink]="'/catalog/' + movie._id">
+                        <img src="{{movie.img}}" alt="">
+                    </a>
+                </div>
+                <p>{{movie.title}}</p>
+            </div>
+            }
+        </div>
+
     </div>
 
 </div>

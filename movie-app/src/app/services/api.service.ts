@@ -10,7 +10,13 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  //MOVIES ---------------------------------------------------------------------------
+  // -------------------------------------- APIs for MOVIES --------------------------------------
+  getMoviesByUserId(userId: string): Observable<Movie[]> {
+    const encodedMovieId = encodeURIComponent(`_ownerId="${userId}"`);
+    const url = `/api/data/movies?where=${encodedMovieId}`;
+    return this.http.get<Movie[]>(url);
+  }
+  
   getMovies() {
     return this.http.get<Movie[]>(`/api/data/movies`);
   };
@@ -48,8 +54,8 @@ export class ApiService {
     return this.http.delete(`/api/data/movies/${movieId}`);
   }
 
-  //COMMENTS ---------------------------------------------------------------------------
-  getAllComments(movieId: string): Observable<Comment[]> {
+  // --------------------------------------APIs for COMMENTS --------------------------------------
+  getCommentsByMovieId(movieId: string): Observable<Comment[]> {
     const encodedMovieId = encodeURIComponent(`movieId="${movieId}"`);
     const loadParam = encodeURIComponent('author=_ownerId:users');
     const url = `/api/data/comments?where=${encodedMovieId}&load=${loadParam}`;
@@ -67,5 +73,4 @@ export class ApiService {
   deleteComment(commentId: string): Observable<Comment> {
     return this.http.delete<Comment>(`/api/data/comments/${commentId}`)
   }
-
 }

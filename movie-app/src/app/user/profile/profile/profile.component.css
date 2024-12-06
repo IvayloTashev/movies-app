@@ -11,9 +11,62 @@
     gap: 10px;
     margin-top: 20px;
     font-size: 1.2rem;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #FF3227;
 }
 
 .account-details-container i {
     padding-right: 10px;
     color: #FF3227;
+}
+
+.card-container {
+    max-width: 1280px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px 20px;
+    margin: auto;
+}
+
+.card {
+    flex: 0 0 18%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+}
+
+.poster-holder {
+    height: 290px;
+}
+
+.poster-holder img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+    border-radius: 15px
+}
+
+.card p {
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: #FF3227;
+}
+
+.header-container {
+    padding-top: 30px;
+}
+
+.header-container h1 a {
+    color: #FF3227;
+    border-bottom: 2px solid white;
+}
+
+.header-container h1 a:hover {
+    color: white;
+    border-bottom: 2px solid #FF3227;
 }

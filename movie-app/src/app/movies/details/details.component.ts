@@ -50,7 +50,7 @@ export class DetailsComponent implements OnInit {
       this.apiLoaded = true;
     }
 
-    this.apiService.getAllComments(this.movieId).subscribe({
+    this.apiService.getCommentsByMovieId(this.movieId).subscribe({
       next: (commentsData) => {
         this.comments = commentsData;
       },
@@ -93,7 +93,7 @@ export class DetailsComponent implements OnInit {
     }
 
     this.apiService.createComment(this.movieId, form.value.comment).subscribe(() => {
-      this.apiService.getAllComments(this.movieId).subscribe((commentsData) => {
+      this.apiService.getCommentsByMovieId(this.movieId).subscribe((commentsData) => {
         this.comments = commentsData;
       });
 
@@ -109,7 +109,7 @@ export class DetailsComponent implements OnInit {
     const updatedContent = editForm.value.editComment;
 
     this.apiService.updateComment(this.editingCommentId, updatedContent).subscribe(() => {
-      this.apiService.getAllComments(this.movieId).subscribe((commentsData) => {
+      this.apiService.getCommentsByMovieId(this.movieId).subscribe((commentsData) => {
         this.comments = commentsData;
       });
 
@@ -124,7 +124,7 @@ export class DetailsComponent implements OnInit {
     }
 
     this.apiService.deleteComment(commentId).subscribe(() => {
-      this.apiService.getAllComments(this.movieId).subscribe((commentsData) => {
+      this.apiService.getCommentsByMovieId(this.movieId).subscribe((commentsData) => {
         this.comments = commentsData;
       });
 
