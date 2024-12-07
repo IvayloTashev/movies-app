@@ -9,20 +9,22 @@
     gap: 20px;
     padding: 50px 20px;
     margin: auto;
+    height: 906px;
 }
 
 .card {
     flex: 0 0 18.5%;
     color: white;
-    border: solid 2px #818181;
+    border: solid 2px #4e4e4e;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background-color: rgb(53, 53, 53);
+    background-color: rgb(36, 36, 36);
     border-radius: 0 20px 0 20px;
     overflow: hidden;
     text-align: center;
     padding: 10px;
+    height: 384px;
 }
 
 .poster-holder {
@@ -41,7 +43,7 @@
 }
 
 .card a {
-    border: solid 2px #818181;
+    border: solid 2px #4e4e4e;
     padding: 5px 10px;
     border-radius: 10px;
     background-color: black;
@@ -50,4 +52,23 @@
 .card a:hover {
     border: solid 2px rgb(0, 0, 0);
     color: #FF3227;
+}
+
+.pagination-container {
+    display: flex;
+    max-width: 1280px;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding-bottom: 20px;
+    justify-content: center;
+    margin: auto;
+}
+
+.pagination-btn {
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: rgb(253, 232, 193);
+    color: black;
+    border-radius: 10px;
 }

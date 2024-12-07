@@ -1736,6 +1736,66 @@
                 director: "Christopher Nolan",
                 _createdOn: 1733436268870,
                 _id: "dea60537-b51b-46bd-820a-467e45fb956c"
+            },
+            "ce235ccf-fb94-4682-9019-ce2339161e96": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                title: "The Silence of the Lambs",
+                description: "A young FBI trainee seeks the help of a brilliant but imprisoned cannibalistic serial killer to catch another serial killer who skins his victims.",
+                img: "https://m.media-amazon.com/images/M/MV5BNDdhOGJhYzctYzYwZC00YmI2LWI0MjctYjg4ODdlMDExYjBlXkEyXkFqcGc@._V1_.jpg",
+                trailer: "6iB21hsprAQ",
+                rating: "8.6",
+                genre: "Crime, Drama, Thriller",
+                director: "Jonathan Demme",
+                _createdOn: 1733480666713,
+                _id: "ce235ccf-fb94-4682-9019-ce2339161e96"
+            },
+            "ed7364b4-21f6-435d-bd9d-db4977507655": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                title: "The Green Mile",
+                description: "The lives of guards on death row are affected by one of their charges: a black man accused of child murder who has a special gift.",
+                img: "https://m.media-amazon.com/images/M/MV5BMTUxMzQyNjA5MF5BMl5BanBnXkFtZTYwOTU2NTY3._V1_FMjpg_UX1000_.jpg",
+                trailer: "Ki4haFrqSrw",
+                rating: "8.6",
+                genre: "Crime, Drama, Fantasy",
+                director: "Frank Darabont",
+                _createdOn: 1733480739324,
+                _id: "ed7364b4-21f6-435d-bd9d-db4977507655"
+            },
+            "635bc9ad-c4d1-4646-a442-f971b9f05d91": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                title: "The Departed",
+                description: "An undercover cop and a mole in the police try to identify each other while infiltrating an Irish gang in Boston.",
+                img: "https://m.media-amazon.com/images/M/MV5BMTI1MTY2OTIxNV5BMl5BanBnXkFtZTYwNjQ4NjY3._V1_FMjpg_UX1000_.jpg",
+                trailer: "iojhqm0JTW4",
+                rating: "8.5",
+                genre: "Crime, Drama, Thriller",
+                director: "Martin Scorsese",
+                _createdOn: 1733480788267,
+                _id: "635bc9ad-c4d1-4646-a442-f971b9f05d91"
+            },
+            "368f38b9-3877-4234-b7a9-7772ce4223a0": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                title: "Django Unchained",
+                description: "With the help of a German bounty hunter, a freed slave sets out to rescue his wife from a brutal plantation owner.",
+                img: "https://m.media-amazon.com/images/M/MV5BMjIyNTQ5NjQ1OV5BMl5BanBnXkFtZTcwODg1MDU4OA@@._V1_FMjpg_UX1000_.jpg",
+                trailer: "0fUCuvNlOCg",
+                rating: "8.4",
+                genre: "Drama, Western",
+                director: "Quentin Tarantino",
+                _createdOn: 1733480852276,
+                _id: "368f38b9-3877-4234-b7a9-7772ce4223a0"
+            },
+            "6494e23b-d110-4dee-804c-d396bac229c5": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                title: "Braveheart",
+                description: "William Wallace, a common man, unites the Scots in their battle to overthrow English rule.",
+                img: "https://m.media-amazon.com/images/M/MV5BNGMxZDBhNGQtYTZlNi00N2UzLWI4NDEtNmUzNWM2NTdmZDA0XkEyXkFqcGc@._V1_.jpg",
+                trailer: "1NJO0jxBtMo",
+                rating: "8.3",
+                genre: "Biography, Drama, History",
+                director: "Mel Gibson",
+                _createdOn: 1733480910310,
+                _id: "6494e23b-d110-4dee-804c-d396bac229c5"
             }
         },
         likes: {

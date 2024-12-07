@@ -12,4 +12,9 @@
         </div>
         }
     </div>
+    <div class="pagination-container">
+        @for (page of paginationArray; track $index) {
+            <button class="pagination-btn" (click)="onPageChange(page)">{{page}}</button>
+        }
+    </div>
 </div>
