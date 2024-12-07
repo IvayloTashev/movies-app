@@ -1,0 +1,23 @@
+<div class="hero-section-container">
+    <h1 class="welcome-mgs">Dive into the world of cinema with MovieHub</h1>
+
+    <div class="image-holder">
+        <img src="movie-poster.webp" alt="poster">
+    </div>
+
+    <div class="last-added">
+        <h2>Recently added movies</h2>
+        <div class="card-container">
+            @for (movie of lastAddedMovies; track $index) {
+            <div class="card">
+                <div class="poster-holder">
+                    <img src="{{movie.img}}" alt="">
+                </div>
+                <p>{{movie.title}}</p>
+                <a [routerLink]="'/catalog/' + movie._id">Details</a>
+            </div>
+            }
+        </div>
+    </div>
+
+</div>
