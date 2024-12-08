@@ -16,10 +16,20 @@ export class ApiService {
     const url = `/api/data/movies?where=${encodedMovieId}`;
     return this.http.get<Movie[]>(url);
   }
-  
-  getMovies() {
-    return this.http.get<Movie[]>(`/api/data/movies`);
+
+  getMovies(params?: string) {
+    let url = '/api/data/movies'
+
+    if (params) {
+      url += params;
+    }
+
+    return this.http.get<Movie[]>(url);
   };
+
+  getLastAddedMovies() {
+    return this.http.get<Movie[]>(`/api/data/movies?sortBy=_createdOn%20desc&offset=0&pageSize=3`);
+  }
 
   getMovieById(id: string) {
     return this.http.get<Movie>(`/api/data/movies/${id}`);
@@ -67,7 +77,7 @@ export class ApiService {
   }
 
   updateComment(commentId: string, content: string): Observable<Comment> {
-    return this.http.patch<Comment>(`/api/data/comments/${commentId}`, {content});
+    return this.http.patch<Comment>(`/api/data/comments/${commentId}`, { content });
   }
 
   deleteComment(commentId: string): Observable<Comment> {
