@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { HeroSectionComponent } from './shared/hero-section/hero-section.component';
+import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { NotFoundComponent } from './error/not-found/not-found.component';
 import { LoginComponent } from './user/login/login.component';
 import { RegisterComponent } from './user/register/register.component';

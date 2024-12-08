@@ -3,14 +3,14 @@ import { environment } from '../environments/environment';
 import { Router } from '@angular/router';
 import { inject } from '@angular/core';
 import { ErrorMessageService } from './core/error-message/error-message.service';
-import { catchError } from 'rxjs';
+import { catchError, throwError } from 'rxjs';
 
 const API = '/api';
-const {apiUrl} = environment
+const { apiUrl } = environment
 
 export const appInterceptor: HttpInterceptorFn = (req, next) => {
-  if(req.url.startsWith(API)) {
-    req= req.clone({
+  if (req.url.startsWith(API)) {
+    req = req.clone({
       url: req.url.replace(API, apiUrl),
     });
   }
@@ -29,14 +29,18 @@ export const appInterceptor: HttpInterceptorFn = (req, next) => {
 
   return next(req).pipe(
     catchError((err) => {
-      if (err.status === 401) {
+      if (err.status === 403) {
         localStorage.removeItem('X-Authorization');
+        router.navigate(['/login']);
+        // router.navigate(['/login']).then(() => {
+        //   location.reload();
+        // });
+      } else if (err.status === 401) {
+        // router.navigate(['/login']);
       } else {
         errorMsgService.setError(err);
-        router.navigate(['/error'])
       }
-
-      return [err];
+      return throwError(()=>err);
     })
   )
 };

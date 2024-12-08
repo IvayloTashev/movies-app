@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../../services/user.service';
 import { User } from '../../../types/user';
 import { ApiService } from '../../../services/api.service';
-import { combineLatest, map, of, switchMap, tap } from 'rxjs';
+import { of, switchMap } from 'rxjs';
 import { Movie } from '../../../types/movie';
 import { RouterLink } from '@angular/router';
 
@@ -33,32 +33,4 @@ export class ProfileComponent implements OnInit {
         this.userMovies = movies
       });
   }
-
-  // ngOnInit(): void {
-  //   this.userService.user$
-  //     .pipe(
-  //       tap((user) => {
-  //         this.userData = user;
-  //       }),
-  //       switchMap((user) => {
-  //         if (!user?._id) {
-  //           return of({ comments: [], movies: [] });
-  //         }
-
-  //         return combineLatest([
-  //           this.apiService.getCommentsByUserId(user._id),
-  //           this.apiService.getMoviesByUserId(user._id),
-  //         ]).pipe(
-  //           map(([comments, movies]) => ({ comments, movies }))
-  //         );
-  //       })
-  //     )
-  //     .subscribe(({ comments, movies }) => {
-  //       this.userComments = comments;
-  //       this.userMovies = movies;
-  //       console.log(this.userComments);
-  //       console.log(this.userMovies);
-        
-  //     });
-  //   }
 }

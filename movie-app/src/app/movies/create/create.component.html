@@ -8,72 +8,15 @@
 
         <h1>Add movie</h1>
 
-        @if (inputTitle?.touched) {
+        @if (inputTitle?.touched || inputDescription?.touched ||
+            inputImage?.touched ||inputTrailer?.touched ||
+            inputRating?.touched || inputGenre?.touched || 
+            inputDirector?.touched) {
             <div>
-                @if (inputTitle?.errors?.['required']) {
-                <p class="error">
-                    Title is required!
-                </p>
-                }
-            </div>
-        }
-
-        @if (inputDescription?.touched) {
-            <div>
-                @if (inputDescription?.errors?.['required']) {
-                <p class="error">
-                    Description is required!
-                </p>
-                }
-            </div>
-        }
-
-        @if (inputImage?.touched) {
-            <div>
-                @if (inputImage?.errors?.['required']) {
-                <p class="error">
-                    Image is required!
-                </p>
-                }
-            </div>
-        }
-
-        @if (inputTrailer?.touched) {
-            <div>
-                @if (inputTrailer?.errors?.['required']) {
-                <p class="error">
-                    Trailer is required!
-                </p>
-                }
-            </div>
-        }
-
-        @if (inputRating?.touched) {
-            <div>
-                @if (inputRating?.errors?.['required']) {
-                <p class="error">
-                    Rating is required!
-                </p>
-                }
-            </div>
-        }
-
-        @if (inputGenre?.touched) {
-            <div>
-                @if (inputGenre?.errors?.['required']) {
-                <p class="error">
-                    Genre is required!
-                </p>
-                }
-            </div>
-        }
-
-        @if (inputDirector?.touched) {
-            <div>
-                @if (inputDirector?.errors?.['required']) {
-                <p class="error">
-                    Director is required!
-                </p>
+                @if (inputTitle?.errors?.['required'] || inputDescription?.errors?.['required'] ||
+                      inputImage?.errors?.['required'] || inputTrailer?.errors?.['required'] ||
+                      inputRating?.errors?.['required'] || inputGenre?.errors?.['required'] || inputDirector?.errors?.['required'] ) {
+                <p class="error">All fields are required! </p>
                 }
             </div>
         }
