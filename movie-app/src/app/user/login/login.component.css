@@ -10,6 +10,7 @@
   object-fit: contain;
   width: 100%;
   opacity: 0.3;
+  height: 780px;
   border-radius: 20px;
 }
 
@@ -84,10 +85,9 @@ text-decoration: underline;
 font-size: 1.2rem;
 }
 
-.firestore-error,
 .error {
   color: #FF3227;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-align: center;
   font-weight: bold;
 }

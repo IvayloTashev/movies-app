@@ -6,47 +6,9 @@
         <h1>Login</h1>
 
         @if (errorMessage) {
-            <div>
-                @if(errorMessage === 'auth/invalid-credential') {
-                    <p class="firestore-error">
-                        Wrong email or password!
-                    </p>
-                }
-            </div>
+            <p class="error">{{errorMessage}}</p>
         }
 
-        @if (inputEmail?.touched) {
-            <div>
-                @if (inputEmail?.errors?.['required']) {
-                <p class="error">
-                    Email is required!
-                </p>
-                }
-
-                @if (inputEmail?.errors?.['emailValidator']) {
-                <p class="error">
-                    {{'Email must be in format example@abv.bg!'}}
-                </p>
-                }
-            </div>
-            }
-
-            @if (inputPassword?.touched) {
-                <div>
-                    @if (inputPassword?.errors?.['required']) {
-                    <p class="error">
-                        Password is required!
-                    </p>
-                    }
-    
-                    @if (inputPassword?.errors?.['minlength']) {
-                    <p class="error">
-                        Password must be at least 6 characters!
-                    </p>
-                    }
-                </div>
-            }
-        
         <form class="form" #form="ngForm" (ngSubmit)="login(form)">
 
             <div class="input-container">
@@ -63,6 +25,22 @@
                     />
             </div>
 
+            @if (inputEmail?.touched) {
+                <div>
+                    @if (inputEmail?.errors?.['required']) {
+                    <p class="error">
+                        Email is required!
+                    </p>
+                    }
+    
+                    @if (inputEmail?.errors?.['emailValidator']) {
+                    <p class="error">
+                        {{'Email must be in format example@abv.bg!'}}
+                    </p>
+                    }
+                </div>
+            }
+
             <div class="input-container">
                 <label for="password">Password<span>*</span></label>
                 <input 
@@ -76,6 +54,22 @@
                     minlength="6"
                     />
             </div>
+
+            @if (inputPassword?.touched) {
+                <div>
+                    @if (inputPassword?.errors?.['required']) {
+                    <p class="error">
+                        Password is required!
+                    </p>
+                    }
+    
+                    @if (inputPassword?.errors?.['minlength']) {
+                    <p class="error">
+                        Password must be at least 6 characters!
+                    </p>
+                    }
+                </div>
+            }
 
             <button>Login</button>
         </form>

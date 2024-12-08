@@ -11,6 +11,7 @@
     width: 100%;
     opacity: 0.3;
     border-radius: 20px;
+    height: 780px;
   }
   
   .register {
@@ -64,7 +65,7 @@
   
   button {
     margin-top: 40px;
-    border: solid 3px #FF3227;
+    border: solid 3px white;
     background-color: #FF3227;
     font-size: 1.5rem;
     font-weight: bold;
@@ -74,8 +75,8 @@
   }
   
   button:hover {
-    border: solid 3px #7A42E3;
-    background-color: #7A42E3;
+    border: solid 3px green;
+    background-color: green;
   }
   
   .register p a {
@@ -84,10 +85,9 @@
   font-size: 1.2rem;
   }
 
-  .firestore-error,
   .error {
     color: #FF3227;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: center;
     font-weight: bold;
   }

@@ -17,18 +17,22 @@ export class LoginComponent {
   constructor(private router: Router, private userService: UserService) { }
 
   login(form: NgForm) {
-
     if (form.invalid) {
       return;
     }
 
-    //TODO catch backend errors
-    this.userService.login(form.value.email, form.value.password).subscribe((data) => {
-      const token = data.accessToken;
-      localStorage.setItem('X-Authorization', token);
-      this.router.navigate(['/']);
+    this.userService.login(form.value.email, form.value.password).subscribe({
+      next:   (data) => {
+        const token = data.accessToken;
+        localStorage.setItem('X-Authorization', token);
+        this.errorMessage = '';
+        this.router.navigate(['/']);
+      },
+      error: (err) => {
+        this.errorMessage = err.error?.message;
+      }
     })
-
   }
+
 
 }
