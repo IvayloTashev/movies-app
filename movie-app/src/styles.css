@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Galindo&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -19,3 +22,12 @@ a {
 body {
     background-color: black;
 }
+
+.nosifer {
+    font-family: 'Nosifer', sans-serif;
+}
+
+.galindo {
+    font-family: 'Galindo', sans-serif;
+}
+

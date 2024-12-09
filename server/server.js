@@ -1433,7 +1433,7 @@
             "d9b2d368-eecf-4ee8-9f0d-4693ae7009c0": {
                 _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
                 movieId: "138682c6-2cb7-4bf9-ba6b-69cd28c8545f",
-                content: "It was okay, but nothing to write home about. Just another average movie.",
+                content: "Absolutely loved the aerial combat scenes! Tom Cruise is phenomenal as always.",
                 _createdOn: 1733392914009,
                 _id: "d9b2d368-eecf-4ee8-9f0d-4693ae7009c0"
             },
@@ -1542,13 +1542,13 @@
 
             "138682c6-2cb7-4bf9-ba6b-69cd28c8545f": {
                 _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-                title: "Spider-Man: No Way Home",
-                description: "With Spider-Man's identity now revealed, Peter asks Doctor Strange for help, leading to dangerous foes from other worlds.",
-                img: "https://play-lh.googleusercontent.com/Odv1QnJMznTD_SRuatFVgE6b2Lgt_BGb8TUBMjsNl-gJi3bnxLXgnusGXWHkFGihsJdTde9ucIhNwMPHbkAF",
-                trailer: "JfVOs4VSpmA",
+                title: "Top Gun: Maverick",
+                description: "The story involves Maverick confronting his past while training a group of younger Top Gun graduates, including the son of his deceased best friend, for a dangerous mission.",
+                img: "https://m.media-amazon.com/images/M/MV5BMDBkZDNjMWEtOTdmMi00NmExLTg5MmMtNTFlYTJlNWY5YTdmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                trailer: "qSqVVswa420",
                 rating: "8.2",
-                genre: "Action, Adventure, Fantasy",
-                director: "Jon Watts",
+                genre: "Action, Epic, Drama",
+                director: "Joseph Kosinski",
                 comments: [],
                 _createdOn: 1732875437672,
                 _id: "138682c6-2cb7-4bf9-ba6b-69cd28c8545f"

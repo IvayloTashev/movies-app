@@ -20,7 +20,6 @@ header {
     background: linear-gradient(to left, #FF3227 0%, #7A42E3 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    border: solid 2px #FF3227;
     padding: 10px;
     border-radius: 15px;
 }

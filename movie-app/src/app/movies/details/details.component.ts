@@ -22,7 +22,6 @@ export class DetailsComponent implements OnInit {
   movie = {} as Movie;
   movieId: string = '';
 
-  //TODO remove Any type
   comments: any = [];
   isWritingComment = false;
   isEditingComment = false;

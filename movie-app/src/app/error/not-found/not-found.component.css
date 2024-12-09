@@ -9,7 +9,7 @@
     font-size: 40rem;
     font-weight: bolder;
     color: transparent;
-    background-image: url('../../../../public/error.webp'); /* Replace with your image path */
+    background-image: url('../../../../public/error.webp');
     background-size: contain;
     background-position: center;
     -webkit-background-clip: text;
