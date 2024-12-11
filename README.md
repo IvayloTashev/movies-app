@@ -7,9 +7,9 @@ This is my first Angular project, made for SoftUni Angular course 2024.
 
 # Installation
 1. Clone the repository `https://github.com/IvayloTashev/movies-app.git`
-2. Install dependencies: `npm i`
-3. Start the server in new terminal: `cd server` and then `node server.js`
-4. Start the client in new terminal: `cd movie-app` and then `ng serve`
+2. Install dependencies: navigate to movie-app forlder with `cd movie-app` and then install dependencies with `npm i`
+3. Start the client in the same terminal with `ng serve`
+4. Start the server in new terminal: navigate to server forlder with `cd server` and then `node server.js`
 
 # Features
 | Feature                      | Guest Users | Registered Users |
