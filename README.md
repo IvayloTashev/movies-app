@@ -1,5 +1,4 @@
 # MOVIEHUB
-This is my first Angular project, made for SoftUni Angular course 2024.
 
 # Used technologies
 - Front-end: Angular
