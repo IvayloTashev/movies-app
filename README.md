@@ -1,5 +1,11 @@
 # MOVIEHUB
 
+## 🌐 Live Demo
+https://mellow-creponne-b6aa90.netlify.app
+
+- Front-end: deployed on Netlify
+- Back-end: deployed on Render
+
 # Used technologies
 - Front-end: Angular
 - Back-end: SoftUni practice server - `https://github.com/softuni-practice-server/softuni-practice-server`
